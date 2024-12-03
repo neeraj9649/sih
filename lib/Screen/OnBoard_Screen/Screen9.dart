@@ -80,11 +80,15 @@ class _Screen9State extends State<Screen9> {
                 child: CustomButton(
                     text: 'Continue',
                     onToggle: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Screen10()),
-                      );
+                      if (checkboxState.checkboxStates[0]) {
+                        print('under age');
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Screen10()),
+                        );
+                      }
                     }),
               ),
             )

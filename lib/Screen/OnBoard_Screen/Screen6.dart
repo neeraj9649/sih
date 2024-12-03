@@ -58,7 +58,7 @@ class _Screen6State extends State<Screen6> {
               ),
             ),
             SizedBox(
-              height: 1100.h,
+              height: 1000.h,
             ),
             Center(
               child: SizedBox(

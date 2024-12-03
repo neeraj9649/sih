@@ -73,7 +73,7 @@ class _Screen10State extends State<Screen10> {
               ),
             ),
             SizedBox(
-              height: 800.h,
+              height: 700.h,
             ),
             Center(
               child: SizedBox(

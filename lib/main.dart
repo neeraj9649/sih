@@ -1,3 +1,4 @@
+import 'package:dash_board/Provider/Age_conformation_provider.dart';
 import 'package:dash_board/Provider/Screen10_Provider.dart';
 import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Provider/Screen7_Provider.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (_) => Screen8Provider()),
           ChangeNotifierProvider(create: (_) => Screen9Provider()),
           ChangeNotifierProvider(create: (_) => Screen10Provider()),
-          // ChangeNotifierProvider(create: (_) => DatePickerProvider()),
+          ChangeNotifierProvider(create: (_) => AgeConformationProvider()),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,

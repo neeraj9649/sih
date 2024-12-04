@@ -1,5 +1,7 @@
 import 'package:dash_board/Provider/Screen10_Provider.dart';
+import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
+import 'package:dash_board/Screen/OnBoard_Screen/Smoking_Habit_Screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:dash_board/Widgets/CustomToggleButton.dart';
@@ -20,6 +22,7 @@ class _Screen10State extends State<Screen10> {
   @override
   Widget build(BuildContext context) {
     final checkboxState = Provider.of<Screen10Provider>(context);
+    final screen6State = Provider.of<Screen6Provider>(context);
 
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
@@ -79,14 +82,18 @@ class _Screen10State extends State<Screen10> {
                     print('Selected option: $selectedValue');
 
                     // Proceed if any option is selected
-                    if (selectedValue.isNotEmpty) {
+                    if (screen6State.selectedOption == 1) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const NavBarScreen()),
                       );
                     } else {
-                      print('No option selected');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SmokinghabitScreen()),
+                      );
                     }
                   },
                 ),

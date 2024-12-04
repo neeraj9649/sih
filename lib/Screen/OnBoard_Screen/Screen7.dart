@@ -1,7 +1,9 @@
+import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Provider/Screen7_Provider.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen8.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen9.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
+import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:dash_board/Widgets/CustomToggleButton.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
 import 'package:dash_board/Widgets/Custom_Top_Row.dart';
@@ -19,10 +21,12 @@ class Screen7 extends StatefulWidget {
 class _Screen7State extends State<Screen7> {
   @override
   Widget build(BuildContext context) {
+    final screen6State = Provider.of<Screen6Provider>(context);
     final checkboxState = Provider.of<Screen7Provider>(context);
 
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
+      appBar: backbuttonAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +90,7 @@ class _Screen7State extends State<Screen7> {
               ),
             ),
             SizedBox(
-              height: 500.h,
+              height: 300.h,
             ),
             Center(
               child: SizedBox(
@@ -95,11 +99,19 @@ class _Screen7State extends State<Screen7> {
                 child: CustomButton(
                     text: 'Continue',
                     onToggle: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Screen8()),
-                      );
+                      if (screen6State.selectedOption == 1) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Screen9()),
+                        );
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Screen8()),
+                        );
+                      }
                     }),
               ),
             )

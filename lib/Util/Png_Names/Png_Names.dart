@@ -9,3 +9,4 @@ const womenpng = 'Assets/Png/women.png';
 const personpng = 'Assets/Png/person.png';
 const couplepng = 'Assets/Png/couple.png';
 const drinkspng = 'Assets/Png/drinks.png';
+const googleIcon = 'Assets/Png/Google_Icon.webp';

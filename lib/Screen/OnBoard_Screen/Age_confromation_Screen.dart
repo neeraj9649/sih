@@ -1,24 +1,23 @@
 import 'package:dash_board/Provider/Age_conformation_provider.dart';
-import 'package:dash_board/Screen/OnBoard_Screen/Screen6.dart';
-import 'package:dash_board/Screen/OnBoard_Screen/Screen7.dart';
+
 import 'package:dash_board/Screen/OnBoard_Screen/ScreenPage2.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
-import 'package:dash_board/Util/Style/Text_Style.dart';
-import 'package:dash_board/Widgets/CustomToggleButton.dart';
+import 'package:dash_board/Widgets/BackButtonAppbart.dart';
+
 import 'package:dash_board/Widgets/Custom_Button.dart';
-import 'package:dash_board/Widgets/Custom_Top_Row.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-class AgeConfromationScreen extends StatefulWidget {
-  const AgeConfromationScreen({super.key});
+class AgeConformationScreen extends StatefulWidget {
+  const AgeConformationScreen({super.key});
 
   @override
-  State<AgeConfromationScreen> createState() => _AgeConfromationScreenState();
+  State<AgeConformationScreen> createState() => _AgeConformationScreenState();
 }
 
-class _AgeConfromationScreenState extends State<AgeConfromationScreen> {
+class _AgeConformationScreenState extends State<AgeConformationScreen> {
   TextEditingController age = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -26,6 +25,7 @@ class _AgeConfromationScreenState extends State<AgeConfromationScreen> {
 
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
+      appBar: backbuttonAppbar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -33,7 +33,7 @@ class _AgeConfromationScreenState extends State<AgeConfromationScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height / 3,
+                height: MediaQuery.of(context).size.height / 5,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 60.w),

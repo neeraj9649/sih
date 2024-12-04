@@ -1,6 +1,8 @@
+import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen6.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
+import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +18,7 @@ class _Screenpage2State extends State<Screenpage2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
+      appBar: backbuttonAppbar(),
       body: SafeArea(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,7 +95,7 @@ class _Screenpage2State extends State<Screenpage2> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Screen6()),
+                MaterialPageRoute(builder: (context) => const NavBarScreen()),
               );
             },
             child: Padding(

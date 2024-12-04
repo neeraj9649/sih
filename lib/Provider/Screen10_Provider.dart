@@ -1,14 +1,28 @@
 import 'package:flutter/material.dart';
 
 class Screen10Provider extends ChangeNotifier {
-  // Track the selection state of each checkbox
-  List<bool> _checkboxStates = List.generate(10, (index) => false);
+  // Track the selected option (0, 1, or 2)
+  int _selectedOption = -1; // -1 means no option is selected
 
-  List<bool> get checkboxStates => _checkboxStates;
+  int get selectedOption => _selectedOption;
 
-  // Toggle the checkbox selection
-  void toggleCheckbox(int index, bool value) {
-    _checkboxStates[index] = value;
+  // Get the selected value as a string
+  String getSelectedValue() {
+    switch (_selectedOption) {
+      case 0:
+        return "Never, this is the first time";
+      case 1:
+        return "Between 1 and 4 times";
+      case 2:
+        return "More than 4 times";
+      default:
+        return "";
+    }
+  }
+
+  // Select an option (0, 1, or 2) and notify listeners
+  void selectOption(int option) {
+    _selectedOption = option; // Set the selected option
     notifyListeners(); // Notify listeners to update the UI
   }
 }

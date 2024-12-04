@@ -1,6 +1,7 @@
 import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen7.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
+import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:dash_board/Widgets/CustomToggleButton.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
 import 'package:dash_board/Widgets/Custom_Top_Row.dart';
@@ -22,6 +23,7 @@ class _Screen6State extends State<Screen6> {
 
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
+      appBar: backbuttonAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,10 +39,7 @@ class _Screen6State extends State<Screen6> {
                 text: "Alcohol",
                 isSelected: checkboxState.checkboxStates[0],
                 onToggle: () {
-                  checkboxState.toggleCheckbox(
-                    0,
-                    !(checkboxState.checkboxStates[0]),
-                  );
+                  checkboxState.toggleCheckbox(0);
                 },
               ),
             ),
@@ -50,15 +49,12 @@ class _Screen6State extends State<Screen6> {
                 text: "Cigarette",
                 isSelected: checkboxState.checkboxStates[1],
                 onToggle: () {
-                  checkboxState.toggleCheckbox(
-                    1,
-                    !(checkboxState.checkboxStates[1]),
-                  );
+                  checkboxState.toggleCheckbox(1);
                 },
               ),
             ),
             SizedBox(
-              height: 1000.h,
+              height: 800.h,
             ),
             Center(
               child: SizedBox(

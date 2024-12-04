@@ -82,6 +82,7 @@
 //   }
 // }
 
+import 'package:dash_board/Screen/Auth/Login_Screen.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Age_confromation_Screen.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen6.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/ScreenPage2.dart';
@@ -160,7 +161,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AgeConfromationScreen(),
+                            builder: (context) => const LoginScreen(),
                           ),
                         );
                       },

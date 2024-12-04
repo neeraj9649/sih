@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Screen9Provider extends ChangeNotifier {
-  // Track the selection state of each checkbox
-  List<bool> _checkboxStates = List.generate(10, (index) => false);
+  // Track the selected age group as a string, initially empty
+  String _selectedAgeGroup = '';
 
-  List<bool> get checkboxStates => _checkboxStates;
+  String get selectedAgeGroup => _selectedAgeGroup;
 
-  // Toggle the checkbox selection
-  void toggleCheckbox(int index, bool value) {
-    _checkboxStates[index] = value;
+  // Set the selected age group and notify listeners
+  void selectAgeGroup(String value) {
+    _selectedAgeGroup = value;
     notifyListeners(); // Notify listeners to update the UI
   }
 }

@@ -1,6 +1,7 @@
 import 'package:dash_board/Provider/Screen8_Provider.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen9.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
+import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:dash_board/Widgets/CustomToggleButton.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
 import 'package:dash_board/Widgets/Custom_Top_Row.dart';
@@ -22,6 +23,7 @@ class _Screen8State extends State<Screen8> {
 
     return Scaffold(
       backgroundColor: onBoardBackgroundColor,
+      appBar: backbuttonAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,7 +138,7 @@ class _Screen8State extends State<Screen8> {
               ),
             ),
             SizedBox(
-              height: 650.h,
+              height: 450.h,
             ),
             Center(
               child: SizedBox(

@@ -1,4 +1,5 @@
 import 'package:dash_board/Screen/DashBoard_Screen/DashBoard_Screen.dart';
+import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Widgets/BackButtonAppbart.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
@@ -84,7 +85,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DashboardScreen()),
+                          builder: (context) => const NavBarScreen()),
                     );
                   }),
             ),

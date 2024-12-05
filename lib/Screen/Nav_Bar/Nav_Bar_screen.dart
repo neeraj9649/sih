@@ -58,6 +58,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 label: 'Search',
               ),
               BottomNavigationBarItem(
+                // icon: Image.asset(flatpng),
                 icon: SvgPicture.asset(
                   svgIcons[2],
                   colorFilter: ColorFilter.mode(

@@ -9,4 +9,9 @@ const womenpng = 'Assets/Png/women.png';
 const personpng = 'Assets/Png/person.png';
 const couplepng = 'Assets/Png/couple.png';
 const drinkspng = 'Assets/Png/drinks.png';
+const flatpng = 'Assets/Png/flat.png';
+const productpng = 'Assets/Png/product.png';
+
+const flatsvg = 'Assets/Png/flat.svg';
 const googleIcon = 'Assets/Png/Google_Icon.webp';
+const shoppingCartIcon = 'Assets/Png/shoppingcart.svg';

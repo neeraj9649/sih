@@ -1,8 +1,6 @@
 import 'package:dash_board/Screen/Auth/Login_Screen.dart';
 import 'package:dash_board/Screen/Auth/Sign_In_screen.dart';
-import 'package:dash_board/Screen/OnBoard_Screen/Age_confromation_Screen.dart';
-import 'package:dash_board/Screen/OnBoard_Screen/Screen6.dart';
-import 'package:dash_board/Screen/OnBoard_Screen/ScreenPage2.dart';
+
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';

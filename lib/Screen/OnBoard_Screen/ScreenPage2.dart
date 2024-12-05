@@ -2,7 +2,7 @@ import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen6.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
-import 'package:dash_board/Widgets/BackButtonAppbart.dart';
+import 'package:dash_board/Widgets/Back_Button_Appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

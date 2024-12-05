@@ -6,4 +6,5 @@ const shopSVG = 'Assets/Svg/shop.svg';
 const homeSVG = 'Assets/Svg/home.svg';
 const communitySVG = 'Assets/Svg/community.svg';
 const coachSVG = 'Assets/Svg/coach.svg';
+const searchSVG = 'Assets/Svg/search.svg';
 const leadingappiconSvg = 'Assets/Svg/leadingappicon.svg';

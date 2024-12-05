@@ -1,7 +1,6 @@
-import 'package:dash_board/Screen/DashBoard_Screen/DashBoard_Screen.dart';
 import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
-import 'package:dash_board/Widgets/BackButtonAppbart.dart';
+import 'package:dash_board/Widgets/Back_Button_Appbar.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
 import 'package:dash_board/Widgets/Custom_Top_Row.dart';
 import 'package:flutter/material.dart';
@@ -85,6 +84,9 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 350.h,
+            ),
             Padding(
               padding: EdgeInsets.only(top: 60.h),
               child: Center(
@@ -94,10 +96,11 @@ class _SignInScreenState extends State<SignInScreen> {
                   child: CustomButton(
                       text: 'Submit',
                       onToggle: () {
-                        Navigator.push(
+                        Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const NavBarScreen()),
+                          (Route<dynamic> route) => false,
                         );
                       }),
                 ),

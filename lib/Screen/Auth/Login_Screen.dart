@@ -1,9 +1,7 @@
-import 'package:dash_board/Screen/OnBoard_Screen/Age_confromation_Screen.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/blank_Screen1.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
-import 'package:dash_board/Widgets/BackButtonAppbart.dart';
-import 'package:dash_board/Widgets/Check_Box_Dialoge.dart';
+import 'package:dash_board/Widgets/Back_Button_Appbar.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
 import 'package:dash_board/Widgets/Rounded_iconButton.dart';
 import 'package:flutter/material.dart';

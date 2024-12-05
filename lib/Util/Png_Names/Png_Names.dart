@@ -10,6 +10,8 @@ const personpng = 'Assets/Png/person.png';
 const couplepng = 'Assets/Png/couple.png';
 const drinkspng = 'Assets/Png/drinks.png';
 const flatpng = 'Assets/Png/flat.png';
+const possiblepng = 'Assets/Png/possible.png';
+
 const productpng = 'Assets/Png/product.png';
 
 const flatsvg = 'Assets/Png/flat.svg';

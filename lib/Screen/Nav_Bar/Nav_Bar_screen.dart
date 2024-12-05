@@ -1,4 +1,5 @@
-import 'package:dash_board/Screen/Nav_Bar/SVG_list/SVG_list.dart';
+import 'package:dash_board/Screen/Nav_Bar/Float/Float_screen1.dart';
+import 'package:dash_board/Util/SVG_list/SVG_list.dart';
 import 'package:dash_board/Screen/Nav_Bar/Screen_list.dart/Screen_list.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +19,15 @@ class _NavBarScreenState extends State<NavBarScreen> {
     return Scaffold(
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //         builder: (context) => FloatScreen1(),
+      //       ),
+      //     );
+      //   },
       // ),
-
       body: screens[currentIndex],
       bottomNavigationBar: Stack(
         clipBehavior: Clip.none,
@@ -106,7 +113,14 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 25, // Center the FAB horizontally
             child: FloatingActionButton(
               shape: CircleBorder(),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FloatScreen1(),
+                  ),
+                );
+              },
               tooltip: 'Centered FAB',
               child: const Icon(
                 Icons.add,

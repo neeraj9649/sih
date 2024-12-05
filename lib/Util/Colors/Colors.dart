@@ -15,6 +15,7 @@ Color textColorQ = const Color(0xFF191970);
 Color fieldTextColor = const Color.fromARGB(255, 111, 46, 164);
 
 // ==============
+Color textcolorblue = Color(0xff191970);
 Color iconSelectColor = Color(0xff191970);
 Color appbarColor = Color(0xff00D4AA);
 Color containerColor1 = Color(0xffFFE1E6);

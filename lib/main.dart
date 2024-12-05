@@ -1,5 +1,6 @@
 import 'package:dash_board/Provider/Age_conformation_provider.dart';
 import 'package:dash_board/Provider/CheckBox_State_provider.dart';
+import 'package:dash_board/Provider/Float_screen1_provider.dart';
 import 'package:dash_board/Provider/Screen10_Provider.dart';
 import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Provider/Screen7_Provider.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       // Use builder only if you need to use library outside ScreenUtilInit context
       child: MultiProvider(
         providers: [
+          ChangeNotifierProvider(create: (_) => Floatscreen1Provider()),
           ChangeNotifierProvider(create: (_) => CheckboxState()),
           ChangeNotifierProvider(create: (_) => Screen6Provider()),
           ChangeNotifierProvider(create: (_) => Screen7Provider()),

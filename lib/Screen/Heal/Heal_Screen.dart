@@ -33,15 +33,8 @@ class _HealScreenState extends State<HealScreen> {
         child: Column(
           children: [
             Center(
-                child: Text(
-              "Let’s Heal",
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                fontSize: 100.sp,
-                color: textcolorblue,
-              ),
-              textAlign: TextAlign.center,
-            )),
+              child: SvgPicture.asset(letsHealSvg),
+            ),
             Padding(
               padding: EdgeInsets.all(40.0.h),
               child: Center(

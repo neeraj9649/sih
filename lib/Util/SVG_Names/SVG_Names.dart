@@ -13,4 +13,10 @@ const leadingappiconSvg = 'Assets/Svg/leadingappicon.svg';
 const healthySvg = 'Assets/Svg/Healthy.svg';
 const runningSvg = 'Assets/Svg/Running.svg';
 const cigSvg = 'Assets/Svg/cigarette.svg';
+const plusSvg = 'Assets/Svg/plus.svg';
+const letsHealSvg = 'Assets/Svg/LetsHeal.svg';
+const chatSvg = 'Assets/Svg/chat.svg';
+const DrSvg = 'Assets/Svg/dr.svg';
+const drjpg = 'Assets/Svg/dr.jpg';
+
 const breathingSvg = 'Assets/Svg/Breathing.svg';

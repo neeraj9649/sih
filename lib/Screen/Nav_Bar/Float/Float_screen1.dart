@@ -1,9 +1,7 @@
 import 'package:dash_board/Provider/Float_screen1_provider.dart';
-import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Screen/Nav_Bar/Float/Float_Screen2.dart';
 import 'package:dash_board/Screen/Nav_Bar/Float/Reasons_list.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
-import 'package:dash_board/Util/Style/Text_Style.dart';
 import 'package:dash_board/Widgets/Back_Button_Appbar.dart';
 import 'package:dash_board/Widgets/CustomToggleButton.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';

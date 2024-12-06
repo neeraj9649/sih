@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CardWidget extends StatelessWidget {
+  const CardWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     double heightS = MediaQuery.of(context).size.height;

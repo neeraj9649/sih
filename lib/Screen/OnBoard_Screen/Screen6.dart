@@ -28,7 +28,7 @@ class _Screen6State extends State<Screen6> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(textValue: 'What do you want to quit?'),

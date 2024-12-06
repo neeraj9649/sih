@@ -15,5 +15,6 @@ const possiblepng = 'Assets/Png/possible.png';
 const productpng = 'Assets/Png/product.png';
 
 const flatsvg = 'Assets/Png/flat.svg';
+const cigpng = 'Assets/Png/cig.png';
 const googleIcon = 'Assets/Png/Google_Icon.webp';
 const shoppingCartIcon = 'Assets/Png/shoppingcart.svg';

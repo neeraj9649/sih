@@ -28,7 +28,7 @@ class _Screen9State extends State<Screen9> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(textValue: 'When did you start?'),

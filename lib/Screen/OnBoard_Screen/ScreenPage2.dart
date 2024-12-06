@@ -81,8 +81,8 @@ class _Screenpage2State extends State<Screenpage2> {
                       ),
                       SizedBox(height: 10.h), // Spacing between the texts
                       SizedBox(
-                        child: Image.asset(drinkspng),
                         height: 400.h,
+                        child: Image.asset(drinkspng),
                       ),
                     ],
                   ),

@@ -6,6 +6,7 @@ import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Provider/Screen7_Provider.dart';
 import 'package:dash_board/Provider/Screen8_Provider.dart';
 import 'package:dash_board/Provider/Screen9_Provider.dart';
+import 'package:dash_board/Provider/coach_Screen_Slide_Provider.dart';
 
 import 'package:dash_board/Screen/Auth/SignUp_Screen.dart';
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(create: (_) => Floatscreen1Provider()),
           ChangeNotifierProvider(create: (_) => CheckboxState()),
+          ChangeNotifierProvider(create: (_) => CoachScreenSlideProvider()),
           ChangeNotifierProvider(create: (_) => Screen6Provider()),
           ChangeNotifierProvider(create: (_) => Screen7Provider()),
           ChangeNotifierProvider(create: (_) => Screen8Provider()),

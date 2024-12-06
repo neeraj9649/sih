@@ -23,7 +23,7 @@ class _SignInScreenState extends State<SignInScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(textValue: 'Enter Your Details'),

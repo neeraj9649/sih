@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AgeConformationProvider extends ChangeNotifier {
   // Track the selection state of each checkbox
-  List<bool> _checkboxStates = List.generate(10, (index) => false);
+  final List<bool> _checkboxStates = List.generate(10, (index) => false);
 
   List<bool> get checkboxStates => _checkboxStates;
 

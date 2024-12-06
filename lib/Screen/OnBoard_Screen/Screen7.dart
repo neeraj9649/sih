@@ -31,7 +31,7 @@ class _Screen7State extends State<Screen7> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(

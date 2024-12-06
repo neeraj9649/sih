@@ -16,7 +16,7 @@ import 'package:flutter/material.dart';
 
 class Screen6Provider extends ChangeNotifier {
   // Track the selection state of each option
-  List<bool> _checkboxStates = [
+  final List<bool> _checkboxStates = [
     false,
     false
   ]; // Only two options: Alcohol and Cigarette

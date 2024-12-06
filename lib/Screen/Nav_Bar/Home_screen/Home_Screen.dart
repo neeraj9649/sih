@@ -1,3 +1,4 @@
+import 'package:dash_board/Screen/Heal/Heal_Screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   66.0.h), // Add padding for the text
                               child: Align(
                                 alignment: Alignment.topLeft,
-                                child: Container(
+                                child: SizedBox(
                                   width: 200,
                                   child: Text(
                                     "Love yourself and those around you – break the habit.",
@@ -102,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   66.0.h), // Add padding for the text
                               child: Align(
                                 alignment: Alignment.topLeft,
-                                child: Container(
+                                child: SizedBox(
                                   width: 200,
                                   child: Text(
                                     "Love yourself and those around you – break the habit.",
@@ -139,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   66.0.h), // Add padding for the text
                               child: Align(
                                 alignment: Alignment.topLeft,
-                                child: Container(
+                                child: SizedBox(
                                   width: 200,
                                   child: Text(
                                     "Love yourself and those around you – break the habit.",
@@ -179,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   66.0.h), // Add padding for the text
                               child: Align(
                                 alignment: Alignment.topLeft,
-                                child: Container(
+                                child: SizedBox(
                                   width: 200,
                                   child: Text(
                                     "Love yourself and those around you – break the habit.",
@@ -627,30 +628,38 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.all(40.w),
-                child: Container(
-                  width: MediaQuery.of(context).size.width, // Set width
-                  // height: 250.h, // Set height
-                  padding: EdgeInsets.all(16), // Add padding
-                  decoration: BoxDecoration(
-                    color: Colors.white, // Background color
-                    borderRadius: BorderRadius.circular(16), // Rounded corners
-                    border: Border.all(
-                      color: Color(0xFF22D3EE), // Border color
-                      width: 2, // Border width
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HealScreen()),
+                  );
+                },
+                child: Padding(
+                  padding: EdgeInsets.all(40.w),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width, // Set width
+                    // height: 250.h, // Set height
+                    padding: EdgeInsets.all(16), // Add padding
+                    decoration: BoxDecoration(
+                      color: Colors.white, // Background color
+                      borderRadius:
+                          BorderRadius.circular(16), // Rounded corners
+                      border: Border.all(
+                        color: Color(0xFF22D3EE), // Border color
+                        width: 2, // Border width
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Lets Heal",
-                      style: GoogleFonts.gabriela(
-                          fontSize: 80.sp,
-                          color: iconSelectColor,
-                          fontWeight: FontWeight.bold),
+                    child: Center(
+                      child: Text(
+                        "Lets Heal",
+                        style: GoogleFonts.gabriela(
+                            fontSize: 80.sp,
+                            color: iconSelectColor,
+                            fontWeight: FontWeight.bold),
 
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis, // Handle long text
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis, // Handle long text
+                      ),
                     ),
                   ),
                 ),

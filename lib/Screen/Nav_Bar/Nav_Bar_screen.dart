@@ -39,6 +39,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 currentIndex = index; // Update current index
               });
             },
+            // ========== 1
             items: [
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -52,6 +53,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 ),
                 label: 'Home',
               ),
+              //================2
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   svgIcons[1],
@@ -64,6 +66,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 ),
                 label: 'Search',
               ),
+              //================3
               BottomNavigationBarItem(
                 // icon: Image.asset(flatpng),
                 icon: SvgPicture.asset(
@@ -77,11 +80,12 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 ),
                 label: 'Profile',
               ),
+              //4==================
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   svgIcons[2],
                   colorFilter: ColorFilter.mode(
-                    currentIndex == 2 ? iconSelectColor : Colors.white,
+                    currentIndex == 3 ? iconSelectColor : Colors.white,
                     BlendMode.srcIn,
                   ),
                   width: 24,
@@ -93,13 +97,13 @@ class _NavBarScreenState extends State<NavBarScreen> {
                 icon: SvgPicture.asset(
                   svgIcons[3],
                   colorFilter: ColorFilter.mode(
-                    currentIndex == 3 ? iconSelectColor : Colors.white,
+                    currentIndex == 4 ? iconSelectColor : Colors.white,
                     BlendMode.srcIn,
                   ),
                   width: 24,
                   height: 24,
                 ),
-                label: 'Profile',
+                label: 'Community',
               ),
             ],
             type: BottomNavigationBarType.fixed,

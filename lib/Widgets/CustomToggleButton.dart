@@ -8,11 +8,11 @@ class CustomToggleButton extends StatelessWidget {
   final VoidCallback onToggle;
 
   const CustomToggleButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.isSelected,
     required this.onToggle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

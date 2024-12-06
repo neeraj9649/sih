@@ -1,5 +1,4 @@
 import 'package:dash_board/Screen/Nav_Bar/Nav_Bar_screen.dart';
-import 'package:dash_board/Screen/Nav_Bar/Shop_screen/Shop_screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';

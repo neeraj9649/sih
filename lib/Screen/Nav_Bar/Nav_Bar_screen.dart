@@ -88,6 +88,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   svgIcons[2],
+                  // ccSvg,
                   colorFilter: ColorFilter.mode(
                     currentIndex == 3 ? iconSelectColor : Colors.white,
                     BlendMode.srcIn,

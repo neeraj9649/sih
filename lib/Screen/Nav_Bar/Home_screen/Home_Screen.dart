@@ -709,6 +709,62 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              //=======
+              Padding(
+                padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
+                child: Text(
+                  "My Entries",
+                  style: GoogleFonts.gabriela(
+                    fontSize: 86.sp,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(20.0.w),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xffEF0000), width: 5.w),
+                    color: Color(0xffF9D9DF), // Background color
+                    borderRadius: BorderRadius.circular(
+                        32.r), // Matches Material borderRadius
+                  ), // Green background color
+                  child: Row(
+                    children: [
+                      // First container - takes 70% space
+                      Expanded(
+                        flex: 7,
+                        child: Container(
+                          child: Wrap(
+                            spacing:
+                                50.0.w, // Spacing between images horizontally
+                            runSpacing: 80.h, // Spacing between rows vertically
+                            children: List.generate(5, (index) {
+                              return Container(
+                                // No fixed height, the height will adjust based on image size
+                                width: 80, // Adjust width of each SVG image
+                                child: Image.asset(
+                                  cigpng, // SVG image repeated
+                                  width: 100.w,
+                                  height: 100.h,
+                                ),
+                              );
+                            }),
+                          ),
+                        ),
+                      ),
+                      // Second container - takes remaining 30% space
+                      Expanded(
+                        flex: 3,
+                        child: Image.asset(
+                          quitpng,
+                          height: 500.h,
+                          // height: 200.h,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               // =====================
               Padding(
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
@@ -751,6 +807,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              //=======
             ],
           ),
         ),

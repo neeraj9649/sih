@@ -25,3 +25,5 @@ const hearticonSvg = 'Assets/Svg/hearti.svg';
 const chaticonSvg = 'Assets/Svg/chatB.svg';
 const racSvg = 'Assets/Svg/rac.svg';
 const menuSvg = 'Assets/Svg/menu.svg';
+const quitSvg = 'Assets/Svg/quit.svg';
+const ccSvg = 'Assets/Svg/cc.svg';

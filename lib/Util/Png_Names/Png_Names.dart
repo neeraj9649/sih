@@ -18,3 +18,4 @@ const flatsvg = 'Assets/Png/flat.svg';
 const cigpng = 'Assets/Png/cig.png';
 const googleIcon = 'Assets/Png/Google_Icon.webp';
 const shoppingCartIcon = 'Assets/Png/shoppingcart.svg';
+const quitpng = 'Assets/Png/quit.png';

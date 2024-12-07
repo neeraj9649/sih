@@ -14,9 +14,10 @@ const healthySvg = 'Assets/Svg/Healthy.svg';
 const runningSvg = 'Assets/Svg/Running.svg';
 const cigSvg = 'Assets/Svg/cigarette.svg';
 const plusSvg = 'Assets/Svg/plus.svg';
-const letsHealSvg = 'Assets/Svg/LetsHeal.svg';
+const healSvg = 'Assets/Svg/heal.svg';
+const letshealSvg = 'Assets/Svg/LetsHeal.svg';
 const chatSvg = 'Assets/Svg/chat.svg';
 const DrSvg = 'Assets/Svg/dr.svg';
 const drjpg = 'Assets/Svg/dr.jpg';
-
+const progressSvg = 'Assets/Svg/progress.svg';
 const breathingSvg = 'Assets/Svg/Breathing.svg';

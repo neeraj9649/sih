@@ -1,5 +1,6 @@
 import 'package:dash_board/Screen/Heal/Heal_Screen.dart';
 import 'package:dash_board/Screen/Nav_Bar/Float/Float_screen1.dart';
+import 'package:dash_board/Screen/Nav_Bar/Plus_screen/Plus_Screen.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
 import 'package:dash_board/Util/SVG_list/SVG_list.dart';
 import 'package:dash_board/Screen/Nav_Bar/Screen_list.dart/Screen_list.dart';
@@ -42,7 +43,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
               setState(() {
                 if (index == 2) {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => HealScreen(),
+                    builder: (context) => PlusScreen(),
                   ));
                 } else {
                   currentIndex = index; // Update current index

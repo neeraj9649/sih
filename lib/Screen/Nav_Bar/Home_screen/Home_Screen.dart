@@ -25,6 +25,21 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         leading: IconButton(
             onPressed: () {}, icon: SvgPicture.asset(leadingappiconSvg)),
+        actions: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            child: IconButton(
+              onPressed: () {
+                // Add functionality if needed
+              },
+              icon: SvgPicture.asset(
+                chatSvg,
+                height: 80.h,
+                width: 80.w,
+              ),
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -635,32 +650,104 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
                 child: Padding(
-                  padding: EdgeInsets.all(40.w),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width, // Set width
-                    // height: 250.h, // Set height
-                    padding: EdgeInsets.all(16), // Add padding
-                    decoration: BoxDecoration(
-                      color: Colors.white, // Background color
-                      borderRadius:
-                          BorderRadius.circular(16), // Rounded corners
-                      border: Border.all(
-                        color: Color(0xFF22D3EE), // Border color
-                        width: 2, // Border width
-                      ),
+                  padding: EdgeInsets.all(20.w),
+                  child: Center(
+                      child: SvgPicture.asset(
+                    letshealSvg,
+                    width: MediaQuery.of(context).size.width,
+                  )),
+                ),
+              ),
+              //==========
+              Padding(
+                padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
+                child: Text(
+                  "My Goals",
+                  style: GoogleFonts.gabriela(
+                    fontSize: 86.sp,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(30.w),
+                child: Container(
+                  width: MediaQuery.of(context).size.width, // Set width
+                  height: 200.h, // Set height
+                  padding: EdgeInsets.all(16), // Add padding
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Background color
+                    borderRadius: BorderRadius.circular(16), // Rounded corners
+                    border: Border.all(
+                      color: Color(0xffFBBF24), // Border color
+                      width: 2, // Border width
                     ),
-                    child: Center(
-                      child: Text(
-                        "Lets Heal",
-                        style: GoogleFonts.gabriela(
-                            fontSize: 80.sp,
-                            color: iconSelectColor,
-                            fontWeight: FontWeight.bold),
-
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis, // Handle long text
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      // PNG Image
+                      Image.asset(
+                        progresspng, // Replace with your image path
+                        width: 100.w, // Set image width
+                        // height: 600.h, // Set image height
                       ),
-                    ),
+                      SizedBox(
+                          width: 26.w), // Add spacing between image and text
+                      // Text
+                      Expanded(
+                        child: Text(
+                          "Let’s save ₹5500",
+                          style: TextStyle(
+                            color: Colors.grey, // Text color
+                            fontSize: 16, // Text size
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis, // Handle long text
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              // =====================
+              Padding(
+                padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
+                child: Text(
+                  "Learn",
+                  style: GoogleFonts.gabriela(
+                    fontSize: 86.sp,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.w),
+                child: Container(
+                  height: 400.h,
+                  decoration: BoxDecoration(
+                    color: Color(0xffE9E1FF), // Background color
+                    borderRadius: BorderRadius.circular(
+                        32.r), // Matches Material borderRadius
+                  ),
+                ),
+              ),
+              //=============
+              Padding(
+                padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
+                child: Text(
+                  "Testimonials",
+                  style: GoogleFonts.gabriela(
+                    fontSize: 86.sp,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.w),
+                child: Container(
+                  height: 400.h,
+                  decoration: BoxDecoration(
+                    color: Color(0xffE9E1FF), // Background color
+                    borderRadius: BorderRadius.circular(
+                        32.r), // Matches Material borderRadius
                   ),
                 ),
               ),

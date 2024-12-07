@@ -33,7 +33,7 @@ class _HealScreenState extends State<HealScreen> {
         child: Column(
           children: [
             Center(
-              child: SvgPicture.asset(letsHealSvg),
+              child: SvgPicture.asset(healSvg),
             ),
             Padding(
               padding: EdgeInsets.all(40.0.h),

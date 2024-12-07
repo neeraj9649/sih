@@ -15,25 +15,23 @@ class _AllCategoriesState extends State<AllCategories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
-              child: CommunityContainer(
-                  containerColor: listofcolor[index % 3],
-                  commentColor: listofTextcolor[index % 3],
-                  imageUrl: drjpg,
-                  name: "usman",
-                  date: "23",
-                  comment:
-                      "I’ve gone 90 days without a cigarette, but I still struggle when I’m stressed. Anyone have strategies for staying calm and resisting the urge?",
-                  iconText2: "1",
-                  iconText1: "2"),
-            );
-          },
-        ),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+            child: CommunityContainer(
+                containerColor: listofcolor[index % 3],
+                commentColor: listofTextcolor[index % 3],
+                imageUrl: drjpg,
+                name: "usman",
+                date: "23",
+                comment:
+                    "I’ve gone 90 days without a cigarette, but I still struggle when I’m stressed. Anyone have strategies for staying calm and resisting the urge?",
+                iconText2: "1",
+                iconText1: "2"),
+          );
+        },
       ),
     );
   }

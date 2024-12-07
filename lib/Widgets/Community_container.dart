@@ -10,16 +10,20 @@ class CommunityContainer extends StatelessWidget {
   final String comment;
   final String iconText1;
   final String iconText2;
+  Color containerColor;
+  Color commentColor;
 
   CommunityContainer({
-    Key? key,
+    super.key,
     required this.imageUrl,
+    required this.commentColor,
+    required this.containerColor,
     required this.name,
     required this.date,
     required this.comment,
     required this.iconText2,
     required this.iconText1,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +32,10 @@ class CommunityContainer extends StatelessWidget {
         minWidth: 0, // No minimum width
         maxWidth: double.infinity, // Stretch only if necessary
       ),
-      padding: EdgeInsets.all(16.w), // Responsive padding
+      padding: EdgeInsets.all(36.w), // Responsive padding
       decoration: BoxDecoration(
-        color: const Color(0xFFFFE1E6), // Background color
-        borderRadius: BorderRadius.circular(12.r), // Rounded corners
+        color: containerColor, // Background color
+        borderRadius: BorderRadius.circular(36.r), // Rounded corners
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,11 +46,14 @@ class CommunityContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Circular image
-              CircleAvatar(
-                radius: 30.r, // Responsive size
-                backgroundImage: AssetImage(drjpg),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: CircleAvatar(
+                  radius: 80.r, // Responsive size
+                  backgroundImage: AssetImage(drjpg),
+                ),
               ),
-              SizedBox(width: 12.w), // Space between image and column
+              SizedBox(width: 22.w), // Space between image and column
               // Column with name and date
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,16 +61,16 @@ class CommunityContainer extends StatelessWidget {
                   Text(
                     name,
                     style: TextStyle(
-                      fontSize: 16.sp, // Responsive text size
+                      fontSize: 56.sp, // Responsive text size
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 4.h), // Space between name and date
+                  SizedBox(height: 10.h), // Space between name and date
                   Text(
                     date,
                     style: TextStyle(
-                      fontSize: 14.sp, // Responsive text size
+                      fontSize: 44.sp, // Responsive text size
                       color: Colors.grey[600],
                     ),
                   ),
@@ -74,11 +81,14 @@ class CommunityContainer extends StatelessWidget {
           SizedBox(height: 16.h), // Space between row and comment
 
           // Second child: Comment text
-          Text(
-            comment,
-            style: TextStyle(
-              fontSize: 14.sp, // Responsive text size
-              color: Colors.black,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Text(
+              comment,
+              style: TextStyle(
+                fontSize: 54.sp, // Responsive text size
+                color: commentColor,
+              ),
             ),
           ),
           SizedBox(height: 16.h), // Space between comment and icon row
@@ -86,17 +96,20 @@ class CommunityContainer extends StatelessWidget {
           // Third child: Row with SVG image and text
           Row(
             children: [
+              SizedBox(
+                width: 20.w,
+              ),
               // First SVG icon and text
               SvgPicture.asset(
-                chatSvg,
-                height: 24.h, // Responsive size
-                width: 24.w,
+                hearticonSvg,
+                height: 64.h, // Responsive size
+                width: 64.w,
               ),
               SizedBox(width: 8.w), // Space between icon and text
               Text(
                 iconText1,
                 style: TextStyle(
-                  fontSize: 14.sp, // Responsive text size
+                  fontSize: 44.sp, // Responsive text size
                   color: Colors.black,
                 ),
               ),
@@ -104,15 +117,15 @@ class CommunityContainer extends StatelessWidget {
 
               // Second SVG icon and text
               SvgPicture.asset(
-                chatSvg,
-                height: 24.h, // Responsive size
-                width: 24.w,
+                chaticonSvg,
+                height: 64.h, // Responsive size
+                width: 64.w,
               ),
               SizedBox(width: 8.w), // Space between icon and text
               Text(
                 iconText2,
                 style: TextStyle(
-                  fontSize: 14.sp, // Responsive text size
+                  fontSize: 44.sp, // Responsive text size
                   color: Colors.black,
                 ),
               ),

@@ -1,9 +1,7 @@
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
-import 'package:dash_board/Util/Style/Text_Style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 class YourCoachScreen extends StatefulWidget {
   const YourCoachScreen({super.key});
@@ -209,25 +207,6 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
           ],
         ),
       ),
-      // body: Center(
-      //   child: Container(
-      //     width: 200, // Adjust the width
-      //     height: 200, // Adjust the height
-      //     decoration: BoxDecoration(
-      //       border: Border.all(
-      //           color: Colors.blue, width: 2), // Border color and width
-      //       borderRadius: BorderRadius.circular(10), // Optional rounded corners
-      //     ),
-      //     child: Center(
-      //       child: SvgPicture.asset(
-      //         DrSvg,
-      //         width: 100, // Adjust the width of the SVG
-      //         height: 100, // Adjust the height of the SVG
-      //         fit: BoxFit.contain, // Ensures the SVG fits inside the container
-      //       ),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

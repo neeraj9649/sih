@@ -21,3 +21,7 @@ const DrSvg = 'Assets/Svg/dr.svg';
 const drjpg = 'Assets/Svg/dr.jpg';
 const progressSvg = 'Assets/Svg/progress.svg';
 const breathingSvg = 'Assets/Svg/Breathing.svg';
+const hearticonSvg = 'Assets/Svg/hearti.svg';
+const chaticonSvg = 'Assets/Svg/chatB.svg';
+const racSvg = 'Assets/Svg/rac.svg';
+const menuSvg = 'Assets/Svg/menu.svg';

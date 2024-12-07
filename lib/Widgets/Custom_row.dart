@@ -14,7 +14,7 @@ class CustomRow extends StatefulWidget {
   String note;
 
   CustomRow({
-    Key? key,
+    super.key,
     required this.containerColor,
     required this.textColor,
     required this.year,
@@ -23,7 +23,7 @@ class CustomRow extends StatefulWidget {
     required this.heading,
     required this.sub,
     required this.note,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomRow> createState() => _CustomRowState();

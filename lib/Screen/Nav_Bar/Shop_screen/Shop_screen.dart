@@ -20,7 +20,7 @@ class _ShopScreenState extends State<ShopScreen> {
       length: 2, // Two tabs: For You and All Products
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Shop"),
+          title: Text("Products for your Journey"),
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 40.w),

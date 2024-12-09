@@ -1,4 +1,4 @@
-import 'package:dash_board/Screen/OnBoard_Screen/blank_Screen1.dart';
+import 'package:dash_board/Screen/OnBoard_Screen/Age_confromation_Screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Widgets/Back_Button_Appbar.dart';
@@ -158,9 +158,24 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const BlankScreen1()),
+                                builder: (context) =>
+                                    const AgeConformationScreen()),
                           );
                         }),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 3.h),
+                  child: Text(
+                    "Or",
+                    style: TextStyle(
+                      fontSize: 70.sp, // Adjust size as needed
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey, // Adjust color as needed
+                    ),
                   ),
                 ),
                 Column(
@@ -168,32 +183,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
-                          left: 20.w, right: 20.w, top: 80.h, bottom: 40.h),
+                          left: 20.w, right: 20.w, top: 30.h, bottom: 40.h),
                       child: RoundedIconButton(
                         imagePath: googleIcon,
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const BlankScreen1()),
+                                builder: (context) =>
+                                    const AgeConformationScreen()),
                           );
                         },
                         text: "Sign up with Google",
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: 20.w, right: 20.w, top: 10.h, bottom: 80.h),
-                      child: RoundedIconButton(
-                        imagePath: '',
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const BlankScreen1()),
-                          );
-                        },
-                        text: "Other Sign up Methods",
                       ),
                     ),
                   ],

@@ -1,5 +1,5 @@
 import 'package:dash_board/Util/Colors/Colors.dart';
-import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
+import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,10 +19,27 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 150.h),
-            Center(child: Image.asset(drjpg)),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.blue, // Border color
+                    width: 3.0, // Border width
+                  ),
+                  borderRadius:
+                      BorderRadius.circular(10), // Optional rounded corners
+                ),
+                child: Image.asset(
+                  dct1, // Replace with your image path
+                  width: 150, // Set your desired width
+                  height: 200, // Set your desired height
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
             Center(
               child: Text(
-                'Dr.  Meera Krishnan',
+                'Dr.  Manohar Krishnan',
                 style: TextStyle(
                     color: textcolorblue,
                     fontSize: 80.sp,
@@ -171,7 +188,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
                       SizedBox(height: 10.h), // Add spacing between the texts
                       Text(
                         softWrap: true,
-                        "Dr. Meera's sessions helped me stay smoke-free for 4 months!Ravi A.",
+                        "Dr. Manohar's sessions helped me stay smoke-free for 4 months!Ravi A.",
                         style: TextStyle(fontSize: 50.sp, color: textcolorblue),
                       ),
                     ],

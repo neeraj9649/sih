@@ -33,7 +33,7 @@ class _Screen8State extends State<Screen8> {
               width: double.infinity,
               child: CustomTopRow(
                   textValue:
-                      'what do you think what reactions will happen to you if you quit ? '),
+                      'What do you think will happen to you,if you quit your addiction?'),
             ),
             Padding(
               padding: EdgeInsets.all(8.0.w),
@@ -124,6 +124,7 @@ class _Screen8State extends State<Screen8> {
                 ],
               ),
             ),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
               child: CustomToggleButton(
@@ -137,8 +138,52 @@ class _Screen8State extends State<Screen8> {
                 },
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
+                    child: SizedBox(
+                      width: 600.w,
+                      height: 200.h,
+                      child: CustomToggleButton(
+                        text: "Constipation",
+                        isSelected: checkboxState.checkboxStates[5],
+                        onToggle: () {
+                          checkboxState.toggleCheckbox(
+                            5,
+                            !(checkboxState.checkboxStates[5]),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
+                    child: SizedBox(
+                      width: 600.w,
+                      height: 200.h,
+                      child: CustomToggleButton(
+                        text: "None of the Above ",
+                        isSelected: checkboxState.checkboxStates[6],
+                        onToggle: () {
+                          checkboxState.toggleCheckbox(
+                            6,
+                            !(checkboxState.checkboxStates[6]),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             SizedBox(
-              height: 450.h,
+              height: 150.h,
             ),
             Center(
               child: SizedBox(

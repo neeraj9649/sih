@@ -31,13 +31,14 @@ class _Screen9State extends State<Screen9> {
             SizedBox(
               height: 600.h,
               width: double.infinity,
-              child: CustomTopRow(textValue: 'When did you start?'),
+              child: CustomTopRow(
+                  textValue: 'At what age you started your addiction ?'),
             ),
             // Under 18 Toggle
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
               child: CustomToggleButton(
-                text: "Under 18",
+                text: "Under 18 years",
                 isSelected: checkboxState.selectedAgeGroup == "Under 18",
                 onToggle: () {
                   checkboxState.selectAgeGroup("Under 18");
@@ -48,7 +49,7 @@ class _Screen9State extends State<Screen9> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
               child: CustomToggleButton(
-                text: "18-24 yrs",
+                text: "18 - 24 years ",
                 isSelected: checkboxState.selectedAgeGroup == "18-24 yrs",
                 onToggle: () {
                   checkboxState.selectAgeGroup("18-24 yrs");
@@ -59,15 +60,25 @@ class _Screen9State extends State<Screen9> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
               child: CustomToggleButton(
-                text: "Above 24",
+                text: "24 - 34 years ",
                 isSelected: checkboxState.selectedAgeGroup == "Above 24",
                 onToggle: () {
                   checkboxState.selectAgeGroup("Above 24");
                 },
               ),
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),
+              child: CustomToggleButton(
+                text: "Above 34 years",
+                isSelected: checkboxState.selectedAgeGroup == "Above 34",
+                onToggle: () {
+                  checkboxState.selectAgeGroup("Above 34");
+                },
+              ),
+            ),
             SizedBox(
-              height: 550.h,
+              height: 250.h,
             ),
             Center(
               child: SizedBox(

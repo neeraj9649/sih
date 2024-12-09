@@ -21,7 +21,7 @@ class CoachScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: appbarColor,
         title: Text(
-          "Coach",
+          "TharapiX",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [

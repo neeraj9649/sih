@@ -1,6 +1,5 @@
 import 'package:dash_board/Screen/Auth/Login_Screen.dart';
 import 'package:dash_board/Screen/Auth/Sign_In_screen.dart';
-
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Widgets/Custom_Button.dart';
@@ -53,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           SizedBox(
                             width: 900.w,
                             child: Text(
-                              "Starting your smoke-free journey is the best gift you’ve given yourself.",
+                              "Starting your Addiction-free journey is the best gift you’ve given yourself.",
                               style: TextStyle(
                                 color: toggleButtonTextColor,
                                 fontSize: 60.sp,

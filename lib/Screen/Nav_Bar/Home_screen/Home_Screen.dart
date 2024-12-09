@@ -1,4 +1,6 @@
 import 'package:dash_board/Screen/Heal/Heal_Screen.dart';
+import 'package:dash_board/Screen/Nav_Bar/Plus_screen/Plus_Screen.dart';
+import 'package:dash_board/Screen/Nav_Bar/questions/quiz_screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
@@ -15,13 +17,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Declare a TextEditingController for the TextField
+  TextEditingController _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    // Dispose the controller to free up resources
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Quit Mate",
-          style: GoogleFonts.gabriela(),
+        title: Image.asset(
+          logo, // Replace with the path to your logo asset
+          height: 100, // Set the height of the logo
         ),
         leading: IconButton(
             onPressed: () {}, icon: SvgPicture.asset(leadingappiconSvg)),
@@ -30,11 +42,16 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.symmetric(horizontal: 8.w),
             child: IconButton(
               onPressed: () {
-                // Add functionality if needed
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const QuizScreen(),
+                  ),
+                );
               },
               icon: SvgPicture.asset(
                 chatSvg,
-                height: 80.h,
+                height: 80.h, // Adjust size for responsiveness
                 width: 80.w,
               ),
             ),
@@ -49,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
-                  "Motivation",
+                  "Motivation for You",
                   style: GoogleFonts.gabriela(
                     fontSize: 86.sp,
                   ),
@@ -61,21 +78,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      // =============== 1
+                      // =============== 1: Love yourself and those around you
                       Container(
-                        width: 700.w, // Set desired width
-                        height: 600.h, // Set desired height
+                        width: 700.w,
+                        height: 600.h,
                         decoration: BoxDecoration(
-                          color: containerColor1, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
+                          color: containerColor1,
+                          borderRadius: BorderRadius.circular(16),
                         ),
                         child: Stack(
                           children: [
-                            // Text in the center of the container
                             Padding(
-                              padding: EdgeInsets.all(
-                                  66.0.h), // Add padding for the text
+                              padding: EdgeInsets.all(66.0.h),
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: SizedBox(
@@ -90,38 +104,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            // SVG image at the bottom right
                             Align(
                               alignment: Alignment.bottomRight,
-                              child: Image.asset(familypng),
+                              child: Image.asset(
+                                familypng,
+                                height: 110,
+                                width: 110,
+                              ),
                             ),
                           ],
                         ),
                       ),
-                      // ====================2
-                      SizedBox(
-                        width: 20.w,
-                      ),
+                      SizedBox(width: 20.w),
+
+                      // =============== 2: Your health is worth it
                       Container(
-                        width: 700.w, // Set desired width
-                        height: 600.h, // Set desired height
+                        width: 700.w,
+                        height: 600.h,
                         decoration: BoxDecoration(
-                          color: containerColor2, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
+                          color: containerColor2,
+                          borderRadius: BorderRadius.circular(16),
                         ),
                         child: Stack(
                           children: [
-                            // Text in the center of the container
                             Padding(
-                              padding: EdgeInsets.all(
-                                  66.0.h), // Add padding for the text
+                              padding: EdgeInsets.all(66.0.h),
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: SizedBox(
                                   width: 200,
                                   child: Text(
-                                    "Love yourself and those around you – break the habit.",
+                                    "Your health is worth it – quit today and start healing.",
                                     style: GoogleFonts.gabriela(
                                       color: container2TextColor,
                                       fontSize: 16,
@@ -130,35 +143,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            // SVG image at the bottom right
                             Align(
                               alignment: Alignment.bottomRight,
-                              child: Image.asset(familypng),
+                              child: Image.asset(
+                                family1,
+                                height: 110,
+                                width: 110,
+                              ),
                             ),
                           ],
                         ),
                       ),
-                      // =============== 1
+                      SizedBox(width: 20.w),
+
+                      // =============== 3: Achieve your dreams
                       Container(
-                        width: 700.w, // Set desired width
-                        height: 600.h, // Set desired height
+                        width: 700.w,
+                        height: 600.h,
                         decoration: BoxDecoration(
-                          color: containerColor1, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
+                          color: containerColor1,
+                          borderRadius: BorderRadius.circular(16),
                         ),
                         child: Stack(
                           children: [
-                            // Text in the center of the container
                             Padding(
-                              padding: EdgeInsets.all(
-                                  66.0.h), // Add padding for the text
+                              padding: EdgeInsets.all(66.0.h),
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: SizedBox(
                                   width: 200,
                                   child: Text(
-                                    "Love yourself and those around you – break the habit.",
+                                    "Achieve your dreams without addiction holding you back.",
                                     style: GoogleFonts.gabriela(
                                       color: container1TextColor,
                                       fontSize: 16,
@@ -167,38 +182,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            // SVG image at the bottom right
                             Align(
                               alignment: Alignment.bottomRight,
-                              child: Image.asset(familypng),
+                              child: Image.asset(
+                                family2,
+                                height: 110,
+                                width: 110,
+                              ),
                             ),
                           ],
                         ),
                       ),
-                      // ====================2
-                      SizedBox(
-                        width: 20.w,
-                      ),
+                      SizedBox(width: 20.w),
+
+                      // =============== 4: Be a role model
                       Container(
-                        width: 700.w, // Set desired width
-                        height: 600.h, // Set desired height
+                        width: 700.w,
+                        height: 600.h,
                         decoration: BoxDecoration(
-                          color: containerColor2, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
+                          color: containerColor2,
+                          borderRadius: BorderRadius.circular(16),
                         ),
                         child: Stack(
                           children: [
-                            // Text in the center of the container
                             Padding(
-                              padding: EdgeInsets.all(
-                                  66.0.h), // Add padding for the text
+                              padding: EdgeInsets.all(66.0.h),
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: SizedBox(
                                   width: 200,
                                   child: Text(
-                                    "Love yourself and those around you – break the habit.",
+                                    "Be a role model – inspire others to live addiction-free.",
                                     style: GoogleFonts.gabriela(
                                       color: container2TextColor,
                                       fontSize: 16,
@@ -207,18 +221,92 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            // SVG image at the bottom right
                             Align(
                               alignment: Alignment.bottomRight,
-                              child: Image.asset(familypng),
+                              child: Image.asset(
+                                family3,
+                                height: 110,
+                                width: 110,
+                              ),
                             ),
                           ],
                         ),
                       ),
+                      SizedBox(width: 20.w),
+
+                      // // =============== 5: Reclaim your freedom
+                      // Container(
+                      //   width: 700.w,
+                      //   height: 600.h,
+                      //   decoration: BoxDecoration(
+                      //     color: containerColor5,
+                      //     borderRadius: BorderRadius.circular(16),
+                      //   ),
+                      //   child: Stack(
+                      //     children: [
+                      //       Padding(
+                      //         padding: EdgeInsets.all(66.0.h),
+                      //         child: Align(
+                      //           alignment: Alignment.topLeft,
+                      //           child: SizedBox(
+                      //             width: 200,
+                      //             child: Text(
+                      //               "Reclaim your freedom – addiction doesn’t define you.",
+                      //               style: GoogleFonts.gabriela(
+                      //                 color: container5TextColor,
+                      //                 fontSize: 16,
+                      //               ),
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //       Align(
+                      //         alignment: Alignment.bottomRight,
+                      //         child: Image.asset('assets/images/freedom.png'),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
+                      // SizedBox(width: 20.w),
+
+                      // // =============== 6: Live a happier life
+                      // Container(
+                      //   width: 700.w,
+                      //   height: 600.h,
+                      //   decoration: BoxDecoration(
+                      //     color: containerColor6,
+                      //     borderRadius: BorderRadius.circular(16),
+                      //   ),
+                      //   child: Stack(
+                      //     children: [
+                      //       Padding(
+                      //         padding: EdgeInsets.all(66.0.h),
+                      //         child: Align(
+                      //           alignment: Alignment.topLeft,
+                      //           child: SizedBox(
+                      //             width: 200,
+                      //             child: Text(
+                      //               "Live a happier life – let go of what’s holding you back.",
+                      //               style: GoogleFonts.gabriela(
+                      //                 color: Colors.blueAccent,
+                      //                 fontSize: 16,
+                      //               ),
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //       Align(
+                      //         alignment: Alignment.bottomRight,
+                      //         child: Image.asset('assets/images/happiness.png'),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
               ),
+
               Padding(
                 padding: EdgeInsets.all(40.w),
                 child: Container(
@@ -242,17 +330,42 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 200.w, // Set image width
                         // height: 600.h, // Set image height
                       ),
-                      SizedBox(width: 16), // Add spacing between image and text
-                      // Text
-                      Expanded(
-                        child: Text(
-                          "How are you today ?",
-                          style: TextStyle(
-                            color: iconSelectColor, // Text color
-                            fontSize: 16, // Text size
+                      SizedBox(
+                          width:
+                              16), // Add spacing between image and input field
+
+                      // TextField with Suffix Icon
+                      Flexible(
+                        child: TextField(
+                          controller:
+                              _controller, // Controller to manage the TextField
+                          decoration: InputDecoration(
+                            hintText:
+                                "How are you today?", // Label inside the input field
+                            hintStyle: TextStyle(
+                              color: iconSelectColor
+                                  .withOpacity(0.6), // Hint text color
+                              fontSize: 16, // Hint text size
+                            ),
+                            // Remove the border and focusedBorder properties
+                            border: InputBorder
+                                .none, // This removes the border completely
+                            contentPadding: EdgeInsets.symmetric(
+                                horizontal: 8.0, vertical: 12.0),
+                            suffixIcon: IconButton(
+                              icon:
+                                  Icon(Icons.arrow_forward), // The "next" icon
+                              onPressed: () {
+                                _controller
+                                    .clear(); // Reset the TextField when pressed
+                              },
+                            ),
                           ),
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis, // Handle long text
+                          style: TextStyle(
+                            color: iconSelectColor, // Input text color
+                            fontSize: 18, // Input text size
+                          ),
+                          maxLines: 1, // Restrict to a single line
                         ),
                       ),
                     ],
@@ -297,9 +410,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 width: 16.w), // Spacing between image and text
                             // Text beside the image
                             Text(
-                              "Cleanser for",
+                              "लत Free from",
                               style: TextStyle(
-                                fontSize: 48.sp, // Font size
+                                fontSize: 68.sp, // Font size
                                 fontWeight: FontWeight.bold, // Bold text
                                 color: iconSelectColor, // Text color
                               ),
@@ -438,7 +551,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 // Text
                                 Expanded(
                                   child: Text(
-                                    "Money (₹)",
+                                    "Money Saved (₹)",
                                     style: TextStyle(
                                       color: iconSelectColor, // Text color
                                       fontSize: 16, // Text size
@@ -452,9 +565,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Center(
                               child: Text(
-                                "5479",
+                                "100",
                                 style: GoogleFonts.gabriela(
-                                    fontSize: 166.sp, color: iconSelectColor),
+                                    fontSize: 126.sp, color: iconSelectColor),
                               ),
                             )
                           ],
@@ -495,7 +608,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 // Text
                                 Expanded(
                                   child: Text(
-                                    "Cigarettes",
+                                    "Cigarettes Avoided",
                                     style: TextStyle(
                                       color: iconSelectColor, // Text color
                                       fontSize: 16, // Text size
@@ -509,9 +622,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Center(
                               child: Text(
-                                "5479",
+                                "10",
                                 style: GoogleFonts.gabriela(
-                                    fontSize: 166.sp, color: iconSelectColor),
+                                    fontSize: 126.sp, color: iconSelectColor),
                               ),
                             )
                           ],
@@ -560,7 +673,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 // Text
                                 Expanded(
                                   child: Text(
-                                    "Days saved",
+                                    "Life Days saved",
                                     style: TextStyle(
                                       color: iconSelectColor, // Text color
                                       fontSize: 16, // Text size
@@ -574,9 +687,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Center(
                               child: Text(
-                                "5479",
+                                "110 Min",
                                 style: GoogleFonts.gabriela(
-                                    fontSize: 166.sp, color: iconSelectColor),
+                                    fontSize: 126.sp, color: iconSelectColor),
                               ),
                             )
                           ],
@@ -617,25 +730,32 @@ class _HomeScreenState extends State<HomeScreen> {
                                 // Text
                                 Expanded(
                                   child: Text(
-                                    "Weekly Planner",
+                                    "Badges Earned",
                                     style: TextStyle(
                                       color: iconSelectColor, // Text color
                                       fontSize: 16, // Text size
                                     ),
-                                    maxLines: 1,
+                                    maxLines: 2,
                                     overflow: TextOverflow
                                         .ellipsis, // Handle long text
                                   ),
                                 ),
                               ],
                             ),
-                            Center(
-                              child: Text(
-                                "5479",
-                                style: GoogleFonts.gabriela(
-                                    fontSize: 166.sp, color: iconSelectColor),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                  10.0), // Adjust the radius for rounded corners
+                              child: Image.asset(
+                                awardpng, // Replace with your image path
+                                width: 80.0, // Set the desired image width
+                                height: 80.0, // Set the desired image height
+                                fit: BoxFit
+                                    .cover, // Adjusts how the image should be fitted
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -662,7 +782,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
-                  "My Goals",
+                  "Daily Task",
                   style: GoogleFonts.gabriela(
                     fontSize: 86.sp,
                   ),
@@ -696,9 +816,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       // Text
                       Expanded(
                         child: Text(
-                          "Let’s save ₹5500",
+                          "you have to smoke only 2 Cig",
                           style: TextStyle(
-                            color: Colors.grey, // Text color
+                            color: const Color.fromARGB(
+                                255, 71, 71, 71), // Text color
                             fontSize: 16, // Text size
                           ),
                           maxLines: 1,
@@ -721,50 +842,112 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Padding(
                 padding: EdgeInsets.all(20.0.w),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xffEF0000), width: 5.w),
-                    color: Color(0xffF9D9DF), // Background color
-                    borderRadius: BorderRadius.circular(
-                        32.r), // Matches Material borderRadius
-                  ), // Green background color
-                  child: Row(
-                    children: [
-                      // First container - takes 70% space
-                      Expanded(
-                        flex: 7,
-                        child: Container(
-                          child: Wrap(
-                            spacing:
-                                50.0.w, // Spacing between images horizontally
-                            runSpacing: 80.h, // Spacing between rows vertically
-                            children: List.generate(5, (index) {
-                              return Container(
-                                // No fixed height, the height will adjust based on image size
-                                width: 80, // Adjust width of each SVG image
-                                child: Image.asset(
-                                  cigpng, // SVG image repeated
-                                  width: 100.w,
-                                  height: 100.h,
-                                ),
-                              );
-                            }),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      int index = 2; // Example index value to simulate behavior
+                      if (index == 2) {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) =>
+                              PlusScreen(), // Replace with your target screen
+                        ));
+                      } else {
+                        // currentIndex = index; // Update current index
+                      }
+                    });
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Color.fromARGB(255, 173, 2, 2), width: 5.w),
+                      color: Color(0xffF9D9DF), // Background color
+                      borderRadius: BorderRadius.circular(
+                          32.r), // Matches Material borderRadius
+                    ),
+                    child: Row(
+                      children: [
+                        // First container - takes 70% space
+                        Expanded(
+                          flex: 7,
+                          child: Container(
+                            child: Wrap(
+                              spacing:
+                                  20.0.w, // Spacing between images horizontally
+                              runSpacing:
+                                  50.h, // Spacing between rows vertically
+                              children: List.generate(5, (index) {
+                                return Container(
+                                  width: 80, // Adjust width of each SVG image
+                                  child: Image.asset(
+                                    cigpng, // SVG image repeated
+                                    width: 100.w,
+                                    height: 100.h,
+                                  ),
+                                );
+                              }),
+                            ),
                           ),
                         ),
-                      ),
-                      // Second container - takes remaining 30% space
-                      Expanded(
-                        flex: 3,
-                        child: Image.asset(
-                          quitpng,
-                          height: 500.h,
-                          // height: 200.h,
+                        // Second container - takes remaining 30% space
+                        Expanded(
+                          flex: 3,
+                          child: Image.asset(
+                            quitpng,
+                            height: 500.h,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
+
+              // Padding(
+              //   padding: EdgeInsets.all(20.0.w),
+              //   child: Container(
+              //     decoration: BoxDecoration(
+              //       border: Border.all(color: Color(0xffEF0000), width: 5.w),
+              //       color: Color(0xffF9D9DF), // Background color
+              //       borderRadius: BorderRadius.circular(
+              //           32.r), // Matches Material borderRadius
+              //     ), // Green background color
+              //     child: Row(
+              //       children: [
+              //         // First container - takes 70% space
+              //         Expanded(
+              //           flex: 7,
+              //           child: Container(
+              //             child: Wrap(
+              //               spacing:
+              //                   50.0.w, // Spacing between images horizontally
+              //               runSpacing: 80.h, // Spacing between rows vertically
+              //               children: List.generate(5, (index) {
+              //                 return Container(
+              //                   // No fixed height, the height will adjust based on image size
+              //                   width: 80, // Adjust width of each SVG image
+              //                   child: Image.asset(
+              //                     cigpng, // SVG image repeated
+              //                     width: 100.w,
+              //                     height: 100.h,
+              //                   ),
+              //                 );
+              //               }),
+              //             ),
+              //           ),
+              //         ),
+              //         // Second container - takes remaining 30% space
+              //         Expanded(
+              //           flex: 3,
+              //           child: Image.asset(
+              //             quitpng,
+              //             height: 500.h,
+              //             // height: 200.h,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               // =====================
               Padding(
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),

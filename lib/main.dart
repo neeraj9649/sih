@@ -8,9 +8,8 @@ import 'package:dash_board/Provider/Screen7_Provider.dart';
 import 'package:dash_board/Provider/Screen8_Provider.dart';
 import 'package:dash_board/Provider/Screen9_Provider.dart';
 import 'package:dash_board/Provider/coach_Screen_Slide_Provider.dart';
-
+import 'package:dash_board/Provider/quiz_provider.dart';
 import 'package:dash_board/Screen/Auth/SignUp_Screen.dart';
-
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,6 +41,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (_) => Screen9Provider()),
           ChangeNotifierProvider(create: (_) => Screen10Provider()),
           ChangeNotifierProvider(create: (_) => AgeConformationProvider()),
+          ChangeNotifierProvider(create: (_) => QuizProvider()),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,

@@ -1,8 +1,8 @@
-import 'package:dash_board/Screen/Nav_Bar/Plus_screen/Plus_Screen.dart';
-import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
-import 'package:dash_board/Util/SVG_list/SVG_list.dart';
+import 'package:dash_board/Screen/Nav_Bar/Float/Float_screen1.dart';
 import 'package:dash_board/Screen/Nav_Bar/Screen_list.dart/Screen_list.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
+import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
+import 'package:dash_board/Util/SVG_list/SVG_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -40,7 +40,8 @@ class _NavBarScreenState extends State<NavBarScreen> {
               setState(() {
                 if (index == 2) {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => PlusScreen(),
+                    // builder: (context) => PlusScreen(),
+                    builder: (context) => FloatScreen1(),
                   ));
                 } else {
                   currentIndex = index; // Update current index
@@ -59,7 +60,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                   width: 94,
                   height: 24,
                 ),
-                label: 'Home',
+                label: 'Dashboard',
               ),
               //================2
               BottomNavigationBarItem(
@@ -72,7 +73,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                   width: 24,
                   height: 24,
                 ),
-                label: 'Search',
+                label: 'Shop',
               ),
               //================3
               BottomNavigationBarItem(
@@ -82,7 +83,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                   width: 170.w,
                   // height: 180.h,
                 ),
-                label: '',
+                label: 'Entry',
               ),
               //4==================
               BottomNavigationBarItem(
@@ -96,7 +97,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
                   width: 24,
                   height: 24,
                 ),
-                label: 'Profile',
+                label: 'TherapiX',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -113,7 +114,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
             ],
             type: BottomNavigationBarType.fixed,
             selectedItemColor: iconSelectColor, // Color for selected item
-            unselectedItemColor: Colors.grey, // Color for unselected items
+            unselectedItemColor: Colors.white, // Color for unselected items
             backgroundColor: appbarColor, // Background color of the navbar
           ),
           // Positioned(

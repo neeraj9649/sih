@@ -29,7 +29,7 @@ class FloatScreen1 extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 60.w, bottom: 20.h),
                   child: Text(
-                    "I Smokedß",
+                    "I Smoked",
                     style: TextStyle(
                         fontSize: 80.sp,
                         color: textcolorblue,

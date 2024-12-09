@@ -43,7 +43,7 @@ class CardWidget extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 16.h, left: 20.w),
               child: Text(
-                "TMB Nicotine Shot",
+                "Product Name",
                 style: TextStyle(
                   fontSize: 60.sp,
                   fontWeight: FontWeight.w600,

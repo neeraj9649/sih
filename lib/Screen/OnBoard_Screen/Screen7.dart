@@ -35,7 +35,8 @@ class _Screen7State extends State<Screen7> {
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(
-                  textValue: 'For what reason you want to quit ? '),
+                  textValue:
+                      'For what reason you want to quit your Addiction? '),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),

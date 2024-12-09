@@ -1,7 +1,7 @@
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CommunityContainer extends StatelessWidget {
   final String imageUrl;
@@ -10,19 +10,18 @@ class CommunityContainer extends StatelessWidget {
   final String comment;
   final String iconText1;
   final String iconText2;
-  Color containerColor;
-  Color commentColor;
+  final Color containerColor;
+  final Color commentColor;
 
-  CommunityContainer({
-    super.key,
+  const CommunityContainer({
     required this.imageUrl,
-    required this.commentColor,
-    required this.containerColor,
     required this.name,
     required this.date,
     required this.comment,
-    required this.iconText2,
     required this.iconText1,
+    required this.iconText2,
+    required this.containerColor,
+    required this.commentColor,
   });
 
   @override
@@ -50,7 +49,8 @@ class CommunityContainer extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: CircleAvatar(
                   radius: 80.r, // Responsive size
-                  backgroundImage: AssetImage(drjpg),
+                  backgroundImage:
+                      AssetImage(imageUrl), // Correct way to load the image
                 ),
               ),
               SizedBox(width: 22.w), // Space between image and column
@@ -87,7 +87,7 @@ class CommunityContainer extends StatelessWidget {
               comment,
               style: TextStyle(
                 fontSize: 54.sp, // Responsive text size
-                color: commentColor,
+                color: Colors.black,
               ),
             ),
           ),
@@ -96,9 +96,7 @@ class CommunityContainer extends StatelessWidget {
           // Third child: Row with SVG image and text
           Row(
             children: [
-              SizedBox(
-                width: 20.w,
-              ),
+              SizedBox(width: 20.w),
               // First SVG icon and text
               SvgPicture.asset(
                 hearticonSvg,

@@ -35,7 +35,8 @@ class _Screen10State extends State<Screen10> {
               height: 600.h,
               width: double.infinity,
               child: CustomTopRow(
-                  textValue: 'How many times have you tried to quit?'),
+                  textValue:
+                      'How many times have you tried to quit your addiction?'),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 40.h),

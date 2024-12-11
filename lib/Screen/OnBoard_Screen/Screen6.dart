@@ -1,3 +1,4 @@
+import 'package:dash_board/Provider/Is_Alcohol_provider.dart';
 import 'package:dash_board/Provider/Screen6_Provider.dart';
 import 'package:dash_board/Screen/OnBoard_Screen/Screen7.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
@@ -19,6 +20,7 @@ class Screen6 extends StatefulWidget {
 class _Screen6State extends State<Screen6> {
   @override
   Widget build(BuildContext context) {
+    final alcohol = Provider.of<IsAlcoholProvider>(context);
     final checkboxState = Provider.of<Screen6Provider>(context);
 
     return Scaffold(
@@ -39,6 +41,7 @@ class _Screen6State extends State<Screen6> {
                 text: "Alcohol",
                 isSelected: checkboxState.checkboxStates[0],
                 onToggle: () {
+                  alcohol.checkAlcohol(true);
                   checkboxState.toggleCheckbox(0);
                 },
               ),
@@ -49,6 +52,8 @@ class _Screen6State extends State<Screen6> {
                 text: "Cigarette",
                 isSelected: checkboxState.checkboxStates[1],
                 onToggle: () {
+                  alcohol.checkAlcohol(false);
+
                   checkboxState.toggleCheckbox(1);
                 },
               ),

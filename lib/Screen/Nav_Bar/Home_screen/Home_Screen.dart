@@ -1,3 +1,4 @@
+import 'package:dash_board/Provider/Is_Alcohol_provider.dart';
 import 'package:dash_board/Screen/Heal/Heal_Screen.dart';
 import 'package:dash_board/Screen/Nav_Bar/Plus_screen/Plus_Screen.dart';
 import 'package:dash_board/Screen/Nav_Bar/questions/quiz_screen.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,6 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isAlcohol = Provider.of<IsAlcoholProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
@@ -514,126 +518,160 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               // ============ grid containers
               // 1
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50.w),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(10.w),
-                      child: Container(
-                        width: MediaQuery.of(context).size.width /
-                            2.3, // Set width
-                        height: 500.h, // Set height
-                        padding: EdgeInsets.all(16), // Add padding
-                        decoration: BoxDecoration(
-                          color: Colors.white, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
-                          border: Border.all(
-                            color: Color(0xFF22D3EE), // Border color
-                            width: 2, // Border width
+              isAlcohol.isAlcohol
+                  ? Padding(
+                      padding: EdgeInsets.only(
+                          left: 50.w, right: 50.w, bottom: 80.h, top: 80.h),
+                      child: SizedBox(
+                        height: 200.h,
+                        width: double
+                            .infinity, // Takes the full width of the parent
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: textcolorblue, // Background color
+                            foregroundColor: Colors.white, // Text color
+                            padding: EdgeInsets.symmetric(
+                                vertical: 16.h), // Button height
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  30.r), // Rounded corners
+                            ),
+                          ),
+                          child: Text(
+                            "Progress Report",
+                            style: TextStyle(
+                                fontSize: 60.sp, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        child: Column(
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                // PNG Image
-                                Image.asset(
-                                  moneypng, // Replace with your image path
-                                  width: 100.w, // Set image width
-                                  // height: 600.h, // Set image height
-                                ),
-                                SizedBox(
-                                    width: 26
-                                        .w), // Add spacing between image and text
-                                // Text
-                                Expanded(
-                                  child: Text(
-                                    "Money Saved (₹)",
-                                    style: TextStyle(
-                                      color: iconSelectColor, // Text color
-                                      fontSize: 16, // Text size
-                                    ),
-                                    maxLines: 3,
-                                    overflow: TextOverflow
-                                        .ellipsis, // Handle long text
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Center(
-                              child: Text(
-                                "100",
-                                style: GoogleFonts.gabriela(
-                                    fontSize: 126.sp, color: iconSelectColor),
-                              ),
-                            )
-                          ],
-                        ),
                       ),
-                    ),
-                    // 2
-                    Padding(
-                      padding: EdgeInsets.all(30.w),
-                      child: Container(
-                        width: MediaQuery.of(context).size.width /
-                            2.3, // Set width
-                        height: 500.h, // Set height
-                        padding: EdgeInsets.all(16), // Add padding
-                        decoration: BoxDecoration(
-                          color: Colors.white, // Background color
-                          borderRadius:
-                              BorderRadius.circular(16), // Rounded corners
-                          border: Border.all(
-                            color: Color(0xffA78BFA), // Border color
-                            width: 2, // Border width
+                    )
+                  : Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 50.w),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10.w),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width /
+                                  2.3, // Set width
+                              height: 500.h, // Set height
+                              padding: EdgeInsets.all(16), // Add padding
+                              decoration: BoxDecoration(
+                                color: Colors.white, // Background color
+                                borderRadius: BorderRadius.circular(
+                                    16), // Rounded corners
+                                border: Border.all(
+                                  color: Color(0xFF22D3EE), // Border color
+                                  width: 2, // Border width
+                                ),
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      // PNG Image
+                                      Image.asset(
+                                        moneypng, // Replace with your image path
+                                        width: 100.w, // Set image width
+                                        // height: 600.h, // Set image height
+                                      ),
+                                      SizedBox(
+                                          width: 26
+                                              .w), // Add spacing between image and text
+                                      // Text
+                                      Expanded(
+                                        child: Text(
+                                          "Money Saved (₹)",
+                                          style: TextStyle(
+                                            color:
+                                                iconSelectColor, // Text color
+                                            fontSize: 16, // Text size
+                                          ),
+                                          maxLines: 3,
+                                          overflow: TextOverflow
+                                              .ellipsis, // Handle long text
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Center(
+                                    child: Text(
+                                      "100",
+                                      style: GoogleFonts.gabriela(
+                                          fontSize: 126.sp,
+                                          color: iconSelectColor),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                // PNG Image
-                                Image.asset(
-                                  lungspng, // Replace with your image path
-                                  width: 100.w, // Set image width
-                                  // height: 600.h, // Set image height
+                          // 2
+                          Padding(
+                            padding: EdgeInsets.all(30.w),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width /
+                                  2.3, // Set width
+                              height: 500.h, // Set height
+                              padding: EdgeInsets.all(16), // Add padding
+                              decoration: BoxDecoration(
+                                color: Colors.white, // Background color
+                                borderRadius: BorderRadius.circular(
+                                    16), // Rounded corners
+                                border: Border.all(
+                                  color: Color(0xffA78BFA), // Border color
+                                  width: 2, // Border width
                                 ),
-                                SizedBox(
-                                    width: 26
-                                        .w), // Add spacing between image and text
-                                // Text
-                                Expanded(
-                                  child: Text(
-                                    "Cigarettes Avoided",
-                                    style: TextStyle(
-                                      color: iconSelectColor, // Text color
-                                      fontSize: 16, // Text size
-                                    ),
-                                    maxLines: 3,
-                                    overflow: TextOverflow
-                                        .ellipsis, // Handle long text
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Center(
-                              child: Text(
-                                "10",
-                                style: GoogleFonts.gabriela(
-                                    fontSize: 126.sp, color: iconSelectColor),
                               ),
-                            )
-                          ],
-                        ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      // PNG Image
+                                      Image.asset(
+                                        lungspng, // Replace with your image path
+                                        width: 100.w, // Set image width
+                                        // height: 600.h, // Set image height
+                                      ),
+                                      SizedBox(
+                                          width: 26
+                                              .w), // Add spacing between image and text
+                                      // Text
+                                      Expanded(
+                                        child: Text(
+                                          "Cigarettes Avoided",
+                                          style: TextStyle(
+                                            color:
+                                                iconSelectColor, // Text color
+                                            fontSize: 16, // Text size
+                                          ),
+                                          maxLines: 3,
+                                          overflow: TextOverflow
+                                              .ellipsis, // Handle long text
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Center(
+                                    child: Text(
+                                      "10",
+                                      style: GoogleFonts.gabriela(
+                                          fontSize: 126.sp,
+                                          color: iconSelectColor),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
               // grid 2
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 50.w),
@@ -831,76 +869,69 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               //=======
-              Padding(
-                padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
-                child: Text(
-                  "My Entries",
-                  style: GoogleFonts.gabriela(
-                    fontSize: 86.sp,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(20.0.w),
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      int index = 2; // Example index value to simulate behavior
-                      if (index == 2) {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) =>
-                              PlusScreen(), // Replace with your target screen
-                        ));
-                      } else {
-                        // currentIndex = index; // Update current index
-                      }
-                    });
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Color.fromARGB(255, 173, 2, 2), width: 5.w),
-                      color: Color(0xffF9D9DF), // Background color
-                      borderRadius: BorderRadius.circular(
-                          32.r), // Matches Material borderRadius
+              isAlcohol.isAlcohol
+                  ? SizedBox.shrink()
+                  : Padding(
+                      padding:
+                          EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
+                      child: Text(
+                        "My Entries",
+                        style: GoogleFonts.gabriela(
+                          fontSize: 86.sp,
+                        ),
+                      ),
                     ),
-                    child: Row(
-                      children: [
-                        // First container - takes 70% space
-                        Expanded(
-                          flex: 7,
-                          child: Container(
-                            child: Wrap(
-                              spacing:
-                                  20.0.w, // Spacing between images horizontally
-                              runSpacing:
-                                  50.h, // Spacing between rows vertically
-                              children: List.generate(5, (index) {
-                                return Container(
-                                  width: 80, // Adjust width of each SVG image
-                                  child: Image.asset(
-                                    cigpng, // SVG image repeated
-                                    width: 100.w,
-                                    height: 100.h,
-                                  ),
-                                );
-                              }),
+              isAlcohol.isAlcohol
+                  ? SizedBox.shrink()
+                  : Padding(
+                      padding: EdgeInsets.all(20.0.w),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border:
+                              Border.all(color: Color(0xffEF0000), width: 5.w),
+                          color: Color(0xffF9D9DF), // Background color
+                          borderRadius: BorderRadius.circular(
+                              32.r), // Matches Material borderRadius
+                        ), // Green background color
+                        child: Row(
+                          children: [
+                            // First container - takes 70% space
+                            Expanded(
+                              flex: 7,
+                              child: Container(
+                                child: Wrap(
+                                  spacing: 50.0
+                                      .w, // Spacing between images horizontally
+                                  runSpacing:
+                                      80.h, // Spacing between rows vertically
+                                  children: List.generate(5, (index) {
+                                    return Container(
+                                      // No fixed height, the height will adjust based on image size
+                                      width:
+                                          80, // Adjust width of each SVG image
+                                      child: Image.asset(
+                                        cigpng, // SVG image repeated
+                                        width: 100.w,
+                                        height: 100.h,
+                                      ),
+                                    );
+                                  }),
+                                ),
+                              ),
                             ),
-                          ),
+                            // Second container - takes remaining 30% space
+                            Expanded(
+                              flex: 3,
+                              child: Image.asset(
+                                quitpng,
+                                height: 500.h,
+                                // height: 200.h,
+                              ),
+                            ),
+                          ],
                         ),
-                        // Second container - takes remaining 30% space
-                        Expanded(
-                          flex: 3,
-                          child: Image.asset(
-                            quitpng,
-                            height: 500.h,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                ),
-              ),
 
               // Padding(
               //   padding: EdgeInsets.all(20.0.w),

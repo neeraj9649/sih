@@ -317,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.white, // Background color
                     borderRadius: BorderRadius.circular(16), // Rounded corners
                     border: Border.all(
-                      color: Color(0xFF22D3EE), // Border color
+                      color: Color.fromARGB(255, 65, 99, 106), // Border color
                       width: 2, // Border width
                     ),
                   ),
@@ -531,7 +531,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius:
                               BorderRadius.circular(16), // Rounded corners
                           border: Border.all(
-                            color: Color(0xFF22D3EE), // Border color
+                            color: Color.fromARGB(
+                                255, 65, 99, 106), // Border color
                             width: 2, // Border width
                           ),
                         ),
@@ -588,7 +589,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius:
                               BorderRadius.circular(16), // Rounded corners
                           border: Border.all(
-                            color: Color(0xffA78BFA), // Border color
+                            color:
+                                Color.fromARGB(255, 59, 49, 87), // Border color
                             width: 2, // Border width
                           ),
                         ),

@@ -15,15 +15,18 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
   final String googleMeetLink = "https://meet.google.com/mwj-zwea-sgj";
 
   Future<void> _launchGoogleMeetInChrome() async {
-    final Uri url = Uri.parse(googleMeetLink);
-    if (await canLaunchUrl(url)) {
-      await launchUrl(
-        url,
-        mode: LaunchMode
-            .externalNonBrowserApplication, // Ensures opening in Chrome
-      );
-    } else {
-      throw 'Could not launch $googleMeetLink';
+    try {
+      final Uri url = Uri.parse(googleMeetLink);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.externalApplication, // Opens in external browser
+        );
+      } else {
+        debugPrint('Could not launch $googleMeetLink');
+      }
+    } catch (e) {
+      debugPrint('Error launching URL: $e');
     }
   }
 
@@ -178,7 +181,6 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
               padding: EdgeInsets.symmetric(vertical: 50.h, horizontal: 50.w),
               child: Container(
                 height: 300.h, // Height as per screen size
-                // width: 900.w, // Width as per screen size
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(
@@ -204,7 +206,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
                       SizedBox(height: 10.h), // Add spacing between the texts
                       Text(
                         softWrap: true,
-                        "Dr. Mahaveer's sessions helped me stay smoke-free for 4 months!Ravi A.",
+                        "Dr. Mahaveer's sessions helped me stay smoke-free for 4 months! Ravi A.",
                         style: TextStyle(fontSize: 50.sp, color: textcolorblue),
                       ),
                     ],

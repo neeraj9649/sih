@@ -12,7 +12,7 @@ class YourCoachScreen extends StatefulWidget {
 }
 
 class _YourCoachScreenState extends State<YourCoachScreen> {
-  final String googleMeetLink = "https://meet.google.com/mwj-zwea-sgj";
+  final String googleMeetLink = "https://meet.google.com/zbx-xpwk-uji";
 
   Future<void> _launchGoogleMeetInChrome() async {
     try {
@@ -232,7 +232,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
                       ),
                     ),
                     child: Text(
-                      "Book a Session",
+                      "Connect to Counselor",
                       style: TextStyle(
                           fontSize: 20.0, fontWeight: FontWeight.bold),
                     ),

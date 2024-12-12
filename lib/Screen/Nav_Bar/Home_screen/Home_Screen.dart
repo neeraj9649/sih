@@ -18,7 +18,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   // Declare a TextEditingController for the TextField
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void dispose() {
@@ -881,7 +881,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               runSpacing:
                                   50.h, // Spacing between rows vertically
                               children: List.generate(5, (index) {
-                                return Container(
+                                return SizedBox(
                                   width: 80, // Adjust width of each SVG image
                                   child: Image.asset(
                                     cigpng, // SVG image repeated

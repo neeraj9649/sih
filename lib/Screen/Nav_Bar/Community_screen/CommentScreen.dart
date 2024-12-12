@@ -77,6 +77,7 @@ class _CommentScreenState extends State<CommentScreen> {
                 // Optionally navigate back after submitting the comment
                 Navigator.pop(context);
               },
+              style: ElevatedButton.styleFrom(backgroundColor: appbarColor),
               child: Text(
                 'Submit',
                 style: TextStyle(
@@ -84,7 +85,6 @@ class _CommentScreenState extends State<CommentScreen> {
                     fontWeight: FontWeight.w700,
                     fontSize: 16),
               ),
-              style: ElevatedButton.styleFrom(backgroundColor: appbarColor),
             ),
           ],
         ),

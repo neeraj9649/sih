@@ -13,7 +13,7 @@ class CommunityContainer extends StatelessWidget {
   final Color containerColor;
   final Color commentColor;
 
-  const CommunityContainer({
+  const CommunityContainer({super.key,
     required this.imageUrl,
     required this.name,
     required this.date,

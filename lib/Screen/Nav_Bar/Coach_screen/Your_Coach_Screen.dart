@@ -2,6 +2,7 @@ import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/Png_Names/Png_Names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class YourCoachScreen extends StatefulWidget {
   const YourCoachScreen({super.key});
@@ -11,6 +12,21 @@ class YourCoachScreen extends StatefulWidget {
 }
 
 class _YourCoachScreenState extends State<YourCoachScreen> {
+  final String googleMeetLink = "https://meet.google.com/mwj-zwea-sgj";
+
+  Future<void> _launchGoogleMeetInChrome() async {
+    final Uri url = Uri.parse(googleMeetLink);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(
+        url,
+        mode: LaunchMode
+            .externalNonBrowserApplication, // Ensures opening in Chrome
+      );
+    } else {
+      throw 'Could not launch $googleMeetLink';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +55,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
             ),
             Center(
               child: Text(
-                'Dr.  Manohar Krishnan',
+                'Dr.  Mahaveer ',
                 style: TextStyle(
                     color: textcolorblue,
                     fontSize: 80.sp,
@@ -188,7 +204,7 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
                       SizedBox(height: 10.h), // Add spacing between the texts
                       Text(
                         softWrap: true,
-                        "Dr. Manohar's sessions helped me stay smoke-free for 4 months!Ravi A.",
+                        "Dr. Mahaveer's sessions helped me stay smoke-free for 4 months!Ravi A.",
                         style: TextStyle(fontSize: 50.sp, color: textcolorblue),
                       ),
                     ],
@@ -199,27 +215,26 @@ class _YourCoachScreenState extends State<YourCoachScreen> {
             Padding(
               padding: EdgeInsets.only(left: 50.w, right: 50.w, bottom: 80.h),
               child: SizedBox(
-                height: 200.h,
-                width: double.infinity, // Takes the full width of the parent
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: textcolorblue, // Background color
-                    foregroundColor: Colors.white, // Text color
-                    padding:
-                        EdgeInsets.symmetric(vertical: 16.h), // Button height
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(30.r), // Rounded corners
+                  height: 200.h,
+                  width: double.infinity, // Takes the full width of the parent
+                  child: ElevatedButton(
+                    onPressed: _launchGoogleMeetInChrome,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: textcolorblue, // Background color
+                      foregroundColor: Colors.white, // Text color
+                      padding:
+                          EdgeInsets.symmetric(vertical: 16.0), // Button height
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(30.0), // Rounded corners
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    "Book a Session",
-                    style:
-                        TextStyle(fontSize: 60.sp, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+                    child: Text(
+                      "Book a Session",
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  )),
             ),
           ],
         ),

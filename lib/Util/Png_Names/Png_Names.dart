@@ -45,7 +45,7 @@ const user19 = 'Assets/Png/g8.png';
 const user20 = 'Assets/Png/g9.png';
 
 // doctors
-const dct1 = 'Assets/Png/IMG_4231.png';
+const dct1 = 'Assets/Png/mahav.jpeg';
 const dct2 = 'Assets/Png/IMG_4232.png';
 const dct3 = 'Assets/Png/IMG_4233.png';
 const dct4 = 'Assets/Png/IMG_4234.png';

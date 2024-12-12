@@ -589,8 +589,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius:
                               BorderRadius.circular(16), // Rounded corners
                           border: Border.all(
-                            color:
-                                Color.fromARGB(255, 59, 49, 87), // Border color
+                            color: Color.fromARGB(
+                                255, 68, 55, 104), // Border color
                             width: 2, // Border width
                           ),
                         ),
@@ -654,7 +654,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius:
                               BorderRadius.circular(16), // Rounded corners
                           border: Border.all(
-                            color: Color(0xffFB7185),
+                            color: Color.fromARGB(255, 230, 34, 64),
                             // Border color
                             width: 2, // Border width
                           ),
@@ -712,7 +712,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius:
                               BorderRadius.circular(16), // Rounded corners
                           border: Border.all(
-                            color: Color(0xffFBBF24), // Border color
+                            color: Color.fromARGB(
+                                255, 179, 129, 1), // Border color
                             width: 2, // Border width
                           ),
                         ),
@@ -863,7 +864,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                       border: Border.all(
                           color: Color.fromARGB(255, 173, 2, 2), width: 5.w),
-                      color: Color(0xffF9D9DF), // Background color
+                      color: Color.fromARGB(
+                          255, 235, 211, 206), // Background color
                       borderRadius: BorderRadius.circular(
                           32.r), // Matches Material borderRadius
                     ),

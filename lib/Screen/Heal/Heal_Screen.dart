@@ -1,3 +1,5 @@
+import 'package:dash_board/Screen/Heal/Exercise_Screen.dart';
+import 'package:dash_board/Screen/Heal/Meditation_Screen.dart';
 import 'package:dash_board/Util/Colors/Colors.dart';
 import 'package:dash_board/Util/SVG_Names/SVG_Names.dart';
 import 'package:dash_board/Widgets/Coustom_container_image.dart';
@@ -47,20 +49,34 @@ class _HealScreenState extends State<HealScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Center(
-                  child: CoustomContainerImage(
-                    image: breathingSvg,
-                    text: "Meditation",
-                    containerColor: Color(0xffFFE1E6),
-                    textColor: Color(0xffEB5067),
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => MeditationScreen(),
+                    ));
+                  },
+                  child: Center(
+                    child: CoustomContainerImage(
+                      image: breathingSvg,
+                      text: "Meditation",
+                      containerColor: Color(0xffFFE1E6),
+                      textColor: Color(0xffEB5067),
+                    ),
                   ),
                 ),
-                Center(
-                  child: CoustomContainerImage(
-                    image: runningSvg,
-                    text: "Exercise",
-                    containerColor: Color(0xffE9E1FF),
-                    textColor: Color(0xff9D4EDD),
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ExerciseScreen(),
+                    ));
+                  },
+                  child: Center(
+                    child: CoustomContainerImage(
+                      image: runningSvg,
+                      text: "Exercise",
+                      containerColor: Color(0xffE9E1FF),
+                      textColor: Color(0xff9D4EDD),
+                    ),
                   ),
                 ),
               ],

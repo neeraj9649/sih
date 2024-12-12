@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
                   "Motivation for You",
-                  style: GoogleFonts.gabriela(
+                  style: GoogleFonts.lora(
                     fontSize: 86.sp,
                   ),
                 ),
@@ -388,7 +388,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: MediaQuery.of(context).size.width, // Container width
                   padding: EdgeInsets.all(10.w), // Padding around the container
                   decoration: BoxDecoration(
-                    color: Color(0xFFE9E1FF), // Background color
+                    color:
+                        Color.fromARGB(255, 201, 225, 209), // Background color
                     borderRadius: BorderRadius.circular(16), // Rounded corners
                   ),
                   child: Column(
@@ -414,7 +415,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                 fontSize: 68.sp, // Font size
                                 fontWeight: FontWeight.bold, // Bold text
-                                color: iconSelectColor, // Text color
+                                color: greenSelectedColor, // Text color
                               ),
                             ),
                           ],
@@ -783,7 +784,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
                   "Daily Task",
-                  style: GoogleFonts.gabriela(
+                  style: GoogleFonts.lora(
                     fontSize: 86.sp,
                   ),
                 ),
@@ -835,7 +836,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
                   "My Entries",
-                  style: GoogleFonts.gabriela(
+                  style: GoogleFonts.lora(
                     fontSize: 86.sp,
                   ),
                 ),
@@ -953,7 +954,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top: 20.h, left: 30.w, bottom: 10.h),
                 child: Text(
                   "Learn",
-                  style: GoogleFonts.gabriela(
+                  style: GoogleFonts.lora(
                     fontSize: 86.sp,
                   ),
                 ),

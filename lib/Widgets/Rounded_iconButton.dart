@@ -50,7 +50,7 @@ class RoundedIconButton extends StatelessWidget {
                 Text(
                   text,
                   style: TextStyle(
-                    color: buttonForgroundColor,
+                    color: buttonForegroundColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

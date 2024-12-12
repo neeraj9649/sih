@@ -47,7 +47,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             appBarTheme: AppBarTheme(
-                backgroundColor: appbarColor, foregroundColor: Colors.white),
+                backgroundColor: appbarColor,
+                foregroundColor: const Color(0xFFE2F1E7)),
             colorScheme: ColorScheme.fromSeed(seedColor: appbarColor),
             useMaterial3: true,
           ),
